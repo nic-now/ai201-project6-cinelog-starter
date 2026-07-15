@@ -16,14 +16,14 @@
 **How I verified:** used pytest tests/test_watchlist.py -v , and checked that both test cases passed
 
 ## Comment 4 — Default visibility
-**My position:**
-**Reasoning:**
-**Tradeoff acknowledged:**
+**My position:** Keep public = True as default
+**Reasoning:** A watchlist can be something users want to share (i.e. sharing lists with friends, it's social). If visibility defaults to private, the sharing capability wouldn't exist since most users might not go out their way to change the settings. By defaulting to public it allows this feature to work as intended (part of the social experience), so the user doesn't have to take extra steps when they want to share their list. 
+**Tradeoff acknowledged:** Downsides include privacy concerns for users that might not have notice the visibility, to address this ideally the user should be made aware of this feature either when they first use the watchlist, and make an easy journey to the settings for it. 
 
 ## Comment 5 — Sort order
-**My position:**
-**Reasoning:**
-**Engagement with reviewer's point:**
+**My position:** Agree with comment, changed to date-added (Descending)
+**Reasoning:** User's expectations are likely to be that watchlist would be ordered by recently added date rather than in alphabetical order (given standards across different platforms). Having it in alphabetical might surprise/bother some users, and might not be practical for this case (since it can also change at any time).
+**Engagement with reviewer's point:** Agreed with reviewer's point, having ordered by date would meet user's expectation and is more useful, updated code to reflect it. 
 
 ## Comment 6 — Rebase
 **What conflicted:**
