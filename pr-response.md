@@ -36,3 +36,7 @@ This PR adds a watchlist feature where users can save films they want to watch l
 Visibility defaults to public since the watchlist is meant to be social and defaulting to private would mean most users never share their list without realizing there's an option. Sort order is newest first, which matches how the collection works and what users would expect.
 
 To test manually: add a film via POST to `/watchlist/<user_id>/add` with a valid `film_id` and confirm a 201 response, try adding the same film again and confirm a 409, try an invalid film_id and confirm a 404, then GET `/watchlist/<user_id>` and confirm films come back newest first. Run `pytest tests/test_watchlist.py -v` to confirm both tests pass.
+
+**Git history:**
+
+![git log --oneline](gitlog.jpg)
