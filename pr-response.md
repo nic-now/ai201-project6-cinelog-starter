@@ -8,12 +8,12 @@
 **How I verified:** I used VSCode's find all references feature.
 
 ## Comment 2 — Deduplication
-**What I did:**
-**How I verified:**
+**What I did:** Added code to handle deduplication case, checks if user already has film in their watchlist, raises error.
+**How I verified:** With test cases created in test folder.
 
 ## Comment 3 — Missing test
-**What I did:**
-**How I verified:**
+**What I did:** Creaetd tests_watchlist.py and added nonexistent film raises, following same fixture and structure as the collection one in test_collection.py. 
+**How I verified:** used pytest tests/test_watchlist.py -v , and checked that both test cases passed
 
 ## Comment 4 — Default visibility
 **My position:**
